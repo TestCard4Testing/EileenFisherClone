@@ -1,0 +1,333 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>EileenFisher</groupId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>ARC</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>yyyyMMdd_HHmmss</maven.build.timestamp.format>
+	</properties>
+	
+	<repositories>
+		<repository>
+			<id>repo.bodar.com</id>
+			<url>http://repo.bodar.com</url>
+		</repository>
+	</repositories>
+	
+	<dependencies>
+	
+	<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-email</artifactId>
+    <version>1.5</version>
+</dependency>
+
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>4.0.9</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.sikulix/sikulixapi -->
+<dependency>
+    <groupId>com.sikulix</groupId>
+    <artifactId>sikulixapi</artifactId>
+    <version>2.0.4</version>
+</dependency>
+
+
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-core</artifactId>
+    <version>7.2.2</version>
+    <exclusions>
+        <exclusion>  <!-- declare the exclusion here -->
+          <groupId>io.cucumber</groupId>
+    	<artifactId>messages</artifactId>
+        </exclusion>
+      </exclusions> 
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.cucumber/messages -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>messages</artifactId>
+    <version>17.1.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-html -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-html</artifactId>
+    <version>0.2.7</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>7.2.2</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>gherkin</artifactId>
+    <version>17.0.2</version>
+    <exclusions>
+        <exclusion>  <!-- declare the exclusion here -->
+          <groupId>io.cucumber</groupId>
+    	<artifactId>messages</artifactId>
+        </exclusion>
+      </exclusions> 
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>7.2.2</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm-deps -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-jvm-deps</artifactId>
+    <version>1.0.6</version>
+    <scope>provided</scope>
+</dependency>
+
+
+			
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>velocity</groupId>
+			<artifactId>velocity-dep</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.browserstack</groupId>
+			<artifactId>browserstack-local-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+		</dependency>
+		
+		</dependencies>
+		
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.16</version>
+				<configuration>
+					<parallel>classes</parallel>
+					<threadCount>10</threadCount>
+					<testFailureIgnore>true</testFailureIgnore>
+					<properties>
+						<!-- <property> <name>usedefaultlisteners</name> <value>True</value> 
+							</property> -->
+						<property>
+							<name>listener</name>
+							<value>driverManager.InvokedMethodListener</value>
+							<include>**/TestRunner_Desktop.class</include>
+							<include>**/TestRunner_Rerun.class</include>
+						</property>
+					</properties>
+					<systemPropertyVariables>
+						<!-- <webdriver.chrome.driver> C:\Users\bsmurthy\git\Magento-Base\Magento\Drivers\chromedriver.exe 
+							</webdriver.chrome.driver> -->
+					</systemPropertyVariables>
+					
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<encoding>iso-8859-1</encoding>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+
+
+		<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>5.6.1</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>ARC</projectName>
+							<outputDirectory>${project.build.directory}/cucumber-JVM-reports
+							</outputDirectory>
+							<enableFlashCharts>true</enableFlashCharts>
+							<buildNumber>42</buildNumber>
+							<parallelTesting>false</parallelTesting>
+							<inputDirectory>${project.build.directory}</inputDirectory>
+							<jsonFiles>
+								<jsonFile>**/cucumber.json</jsonFile>
+							</jsonFiles>
+							<testFailureIgnore>true</testFailureIgnore>
+							<buildSuccessOnTestFailure>true</buildSuccessOnTestFailure>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+	<artifactId>EileenFisher</artifactId>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>3.8.1</version>
+			</dependency>
+			<dependency>
+				<groupId>info.cukes</groupId>
+				<artifactId>cucumber-core</artifactId>
+				<version>1.2.5</version>
+			</dependency>
+			<dependency>
+				<groupId>info.cukes</groupId>
+				<artifactId>cucumber-html</artifactId>
+				<version>0.2.6</version>
+			</dependency>
+			<dependency>
+				<groupId>info.cukes</groupId>
+				<artifactId>cucumber-java</artifactId>
+				<version>1.2.5</version>
+			</dependency>
+			<dependency>
+				<groupId>info.cukes</groupId>
+				<artifactId>cucumber-junit</artifactId>
+				<version>1.2.5</version>
+			</dependency>
+			<dependency>
+				<groupId>info.cukes</groupId>
+				<artifactId>gherkin</artifactId>
+				<version>2.12.2</version>
+			</dependency>
+			<dependency>
+				<groupId>info.cukes</groupId>
+				<artifactId>cucumber-testng</artifactId>
+				<version>1.2.5</version>
+			</dependency>
+			<dependency>
+				<groupId>info.cukes</groupId>
+				<artifactId>cucumber-jvm-deps</artifactId>
+				<version>1.0.5</version>
+			</dependency>
+			<dependency>
+				<groupId>net.masterthought</groupId>
+				<artifactId>cucumber-reporting</artifactId>
+				<version>3.18.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.seleniumhq.selenium</groupId>
+				<artifactId>selenium-java</artifactId>
+				<version>3.11.0</version>
+			</dependency>
+			<dependency>
+				<groupId>info.cukes</groupId>
+				<artifactId>cucumber-picocontainer</artifactId>
+				<version>1.2.5</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>23.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.testng</groupId>
+				<artifactId>testng</artifactId>
+				<version>6.9.10</version>
+			</dependency>
+			<dependency>
+				<groupId>org.uncommons</groupId>
+				<artifactId>reportng</artifactId>
+				<version>1.1.4</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.inject</groupId>
+				<artifactId>guice</artifactId>
+				<version>3.0</version>
+			</dependency>
+			<dependency>
+				<groupId>velocity</groupId>
+				<artifactId>velocity-dep</artifactId>
+				<version>1.4</version>
+			</dependency>
+			<dependency>
+				<groupId>com.browserstack</groupId>
+				<artifactId>browserstack-local-java</artifactId>
+				<version>1.0.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi</artifactId>
+				<version>3.17</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml</artifactId>
+				<version>3.17</version>
+			</dependency>
+			<dependency>
+				<groupId>io.github.bonigarcia</groupId>
+				<artifactId>webdrivermanager</artifactId>
+				<version>4.2.0</version>
+				<scope>test</scope>
+			</dependency>
+		
+		</dependencies>
+	</dependencyManagement>
+</project>

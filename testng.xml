@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cucumber_Training_Project" parallel="tests" thread-count="5">
+	<listeners>
+ 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+ 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+ 		<listener class-name="driverManager.InvokedMethodListener" />
+ 	</listeners>
+ 	
+ 	
+	<test name="Test Run in Chrome" parallel="classes" thread-count="5">
+		<parameter name="browser" value="chrome" />
+		<parameter name="locale" value="dev" />
+		<parameter name="platform" value="Windows" />
+		<classes>
+		<class name="runner.TestRunner_Desktop" />
+		</classes>
+	</test> 
+	
+	<!-- <test name="Test Run in Firefox" parallel="classes" thread-count="5">
+		<parameter name="browser" value="firefox" />
+		<parameter name="locale" value="dev" />
+		<parameter name="platform" value="Windows" />
+		<classes>
+		<class name="runner.TestRunner_Desktop" />
+		</classes>
+	</test> -->
+	
+	<!-- 
+	<test name="Test Run in Mac Safari" parallel="classes" thread-count="5">
+        <parameter name="browserName" value="safari" /> 
+        <parameter name="platform" value="OSX" /> 
+        <classes> <class name="runner.TestRunner_Desktop" /> 
+        </classes>
+        </test> -->
+	
+	<!-- <test name="Test Run in Firefox" parallel="classes" thread-count="5">
+		<parameter name="browserName" value="firefox" />
+		<parameter name="platform" value="Windows" />
+		<classes>
+		<class name="runner.TestRunner_Desktop" />
+		</classes>
+	</test>
+	<test name="Test Run in Edge" parallel="classes" thread-count="5">
+		<parameter name="browserName" value="edge" />
+		<parameter name="platform" value="Windows" />
+		<classes>
+		<class name="runner.TestRunner_Desktop" />
+		</classes>
+	</test>
+	<test name="Test Run in Safari" parallel="classes" thread-count="5">
+		<parameter name="browserName" value="safari" />
+		<parameter name="platform" value="Windows" />
+		<classes>
+		<class name="runner.TestRunner_Desktop" />
+		</classes>
+	</test>
+	<test name="Test Run in Android" parallel="classes" thread-count="5">
+		<parameter name="browserName" value="chrome" />
+		<parameter name="platform" value="Android" />
+		<classes>
+		<class name="runner.TestRunner_Desktop" />
+		</classes>
+	</test>
+	<test name="Test Run in iOS Safari" parallel="classes" thread-count="5">
+		<parameter name="browserName" value="safari" />
+		<parameter name="platform" value="iOS" />
+		<classes>
+		<class name="runner.TestRunner_Desktop" />
+		</classes>
+	</test>  -->
+ </suite>

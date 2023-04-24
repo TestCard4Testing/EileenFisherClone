@@ -1,0 +1,60 @@
+25/11/2022 18:50  --> 820000026267  --> Placing orders with Credit card as payment method
+26/11/2022 10:44  --> 820000026269  --> Placing orders with PayPal as payment method
+26/11/2022 10:46  --> 820000026270  --> Placing orders with Credit card as payment method
+27/11/2022 15:39  --> 820000026356  --> Placing orders with Credit card as payment method
+27/11/2022 15:41  --> 820000026357  --> Placing orders with Credit card as payment method
+27/11/2022 15:47  --> 820000026358  --> Placing orders with PayPal as payment method
+27/11/2022 15:55  --> 820000026359  --> Placing orders with PayPal as payment method
+27/11/2022 16:04  --> 820000026360  --> Placing orders with PayPal as payment method
+27/11/2022 16:09  --> 820000026361  --> Placing orders with Credit card as payment method
+27/11/2022 16:12  --> 820000026362  --> Placing orders with PayPal as payment method
+27/11/2022 19:13  --> 820000026363  --> Placing orders with Credit card as payment method
+27/11/2022 19:17  --> 820000026364  --> Placing orders with PayPal as payment method
+28/11/2022 02:27  --> 820000026365  --> Placing orders with Credit card as payment method
+28/11/2022 02:29  --> 820000026366  --> Placing orders with PayPal as payment method
+28/11/2022 09:16  --> 820000026367  --> Placing orders with Credit card as payment method
+28/11/2022 09:19  --> 820000026368  --> Placing orders with PayPal as payment method
+28/11/2022 09:20  --> 820000026369  --> Placing orders with Credit card as payment method
+28/11/2022 09:24  --> 820000026370  --> Placing orders with PayPal as payment method
+28/11/2022 09:25  --> 820000026371  --> Placing orders with Credit card as payment method
+28/11/2022 09:28  --> 820000026372  --> Placing orders with PayPal as payment method
+28/11/2022 09:30  --> 820000026373  --> Placing orders with Credit card as payment method
+28/11/2022 09:32  --> 820000026374  --> Placing orders with PayPal as payment method
+28/11/2022 13:59  --> 820000026376  --> Placing orders with Credit card as payment method
+28/11/2022 14:03  --> 820000026377  --> Placing orders with PayPal as payment method
+28/11/2022 14:12  --> 820000026378  --> Placing orders with Credit card as payment method
+29/11/2022 16:48  --> 820000026454  --> Placing orders with Credit card as payment method
+29/11/2022 16:51  --> 820000026455  --> Placing orders with PayPal as payment method
+30/11/2022 18:02  --> 820000026462  --> Placing orders with PayPal as payment method
+02/12/2022 11:27  --> 820000026554  --> Placing orders with Credit card as payment method
+02/12/2022 11:29  --> 820000026555  --> Placing orders with PayPal as payment method
+02/12/2022 12:43  --> 820000026556  --> Placing orders with Credit card as payment method
+02/12/2022 12:47  --> 820000026557  --> Placing orders with PayPal as payment method
+02/12/2022 13:08  --> 820000026558  --> Placing Pick up instore order Credit card as payment method
+02/12/2022 13:14  --> 820000026559  --> Placing Pick up instore order with PayPal as payment method
+03/12/2022 05:54  --> 820000026560  --> Placing orders with PayPal as payment method
+03/12/2022 19:22  --> 820000026654  --> Placing Pick up instore order with PayPal as payment method
+03/12/2022 19:25  --> 820000026655  --> Placing orders with Credit card as payment method
+03/12/2022 19:27  --> 820000026656  --> Placing orders with PayPal as payment method
+04/12/2022 23:25  --> 820000026754  --> Placing Pick up instore order with PayPal as payment method
+04/12/2022 23:28  --> 820000026755  --> Placing orders with Credit card as payment method
+04/12/2022 23:30  --> 820000026756  --> Placing orders with PayPal as payment method
+05/12/2022 11:51  --> 820000026854  --> Placing orders with Credit card as payment method
+05/12/2022 11:53  --> 820000026855  --> Placing orders with PayPal as payment method
+05/12/2022 13:08  --> 820000026856  --> Placing Pick up instore order with PayPal as payment method
+05/12/2022 15:39  --> 820000026858  --> Placing orders with Credit card as payment method
+06/12/2022 07:40  --> 820000026860  --> Placing orders with Credit card as payment method
+06/12/2022 07:54  --> 820000026861  --> Placing orders with Credit card as payment method
+06/12/2022 07:56  --> 820000026862  --> Placing orders with Credit card as payment method
+06/12/2022 07:57  --> 820000026863  --> Placing orders with PayPal as payment method
+06/12/2022 08:02  --> 820000026864  --> Placing orders with Credit card as payment method
+06/12/2022 08:04  --> 820000026865  --> Placing orders with PayPal as payment method
+06/12/2022 08:23  --> 820000026866  --> Placing Pick up instore order with PayPal as payment method
+06/12/2022 08:27  --> 820000026867  --> Placing Pick up instore order Credit card as payment method
+06/12/2022 08:34  --> 820000026868  --> Placing Pick up instore order with PayPal as payment method
+06/12/2022 08:44  --> 820000026869  --> Placing Pick up instore order with PayPal as payment method
+06/12/2022 08:47  --> 820000026870  --> Placing Pick up instore order Credit card as payment method
+06/12/2022 08:52  --> 820000026871  --> Placing orders with PayPal as payment method
+06/12/2022 17:10  --> 820000026875  --> Placing orders with Credit card as payment method
+06/12/2022 17:14  --> 820000026876  --> Placing orders with Credit card as payment method
+06/12/2022 17:17  --> 820000026877  --> Placing orders with PayPal as payment method
